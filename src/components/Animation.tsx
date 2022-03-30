@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react"
 import { useScrollYPosition } from "react-use-scroll-position"
 
+import AnimationIdleUrl from '../assets/Unicorn.png'
 
 export default function Animation() {
 
-    const [currentSrc, setCurrentSrc] = useState("./src/assets/Unicorn.png")
+    const [currentSrc, setCurrentSrc] = useState(AnimationIdleUrl)
     const scrollY = useScrollYPosition()
 
     useEffect(() => {

@@ -1,6 +1,9 @@
 import { GoMarkGithub } from 'react-icons/go';
 import { FaExternalLinkAlt } from 'react-icons/fa';
 
+import AwesomeDrawsomeThumbUrl from '../assets/Screenshot 2022-03-29 114949.png';
+import CanvasToNotionThumbUrl from '../assets/Screenshot 2022-03-29 175619.png';
+
 interface ProjectRecord {
     title: string
     description: string
@@ -17,7 +20,7 @@ const projectRecords: Array<ProjectRecord> = [
         tags: ["React.js", "Chakra UI", "PIXI.js", "Netlify"],
         projectUrl: "https://awesomedrawsome.netlify.app/",
         githubUrl: "https://github.com/CierraM/AwesomeDrawsome",
-        thumbUrl: "./src/assets/Screenshot 2022-03-29 114949.png"
+        thumbUrl: AwesomeDrawsomeThumbUrl
     },
     {
         title: "Canvas to Notion",
@@ -25,7 +28,7 @@ const projectRecords: Array<ProjectRecord> = [
         tags: ["Node.js, Notion API"],
         projectUrl: "https://github.com/thefloatingtree/canvas-to-notion",
         githubUrl: "https://github.com/thefloatingtree/canvas-to-notion",
-        thumbUrl: "./src/assets/Screenshot 2022-03-29 175619.png"
+        thumbUrl: CanvasToNotionThumbUrl
     },
     // {
     //     title: "",
