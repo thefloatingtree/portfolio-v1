@@ -1,8 +1,10 @@
 import { useState } from "react";
 import Button from "./Button";
+import { Point } from "./Point";
 
 interface ExperienceRecord {
     company: string
+    companyUrl: string
     position: string
     time: string
     points: Array<string>
@@ -11,6 +13,7 @@ interface ExperienceRecord {
 const experienceRecords: Array<ExperienceRecord> = [
     {
         company: "Family Search",
+        companyUrl: "https://www.familysearch.org/",
         position: "Frontend Intern",
         time: "July - September 2021",
         points: [
@@ -21,6 +24,7 @@ const experienceRecords: Array<ExperienceRecord> = [
     },
     {
         company: "Pitch59",
+        companyUrl: "https://pitch59.com/",
         position: "QA/UX/UI Intern",
         time: "April - July 2021",
         points: [
@@ -31,6 +35,7 @@ const experienceRecords: Array<ExperienceRecord> = [
     },
     {
         company: "Brigham Young University - Idaho",
+        companyUrl: "https://www.byui.edu/",
         position: "Student Software Engineer",
         time: "March 2019 - April 2021",
         points: [
@@ -41,31 +46,22 @@ const experienceRecords: Array<ExperienceRecord> = [
     },
 ]
 
-
-function Point({ point }: any) {
-    return <li className="flex space-x-3">
-        <div className="w-4">
-            <div className="bg-imperial-red w-2 h-2 rounded-full mt-2"></div>
-        </div>
-        <p>{point}</p>
-    </li>
-}
-
-
 export default function Experience() {
 
     const [selectedCompany, setSelectedCompany] = useState(experienceRecords[0])
 
     return (
-        <div className="font-arvo-bold text-prussian-blue space-y-4">
-            <h1 className="text-xl">Experience</h1>
+        <div id="experience" className="font-arvo-bold text-prussian-blue space-y-4">
+            <h1 className="text-xl"># Experience</h1>
             <div className="grid grid-cols-3 gap-4">
                 <div className="col-span-1">
                     { experienceRecords.map(record => <Button color={record.company == selectedCompany.company ? 'red' : 'ghost'} onClick={() => setSelectedCompany(record)} >{record.company}</Button> ) }
                 </div>
-                <div className="col-span-2">
-                    <h1>{selectedCompany.position} at {selectedCompany.company}</h1>
-                    <h1>{selectedCompany.time}</h1>
+                <div className="col-span-2 space-y-3">
+                    <div>
+                        <h1 className="text-xl">{selectedCompany.position} <span className="text-imperial-red"><a target="_blank" href={selectedCompany.companyUrl}>@ {selectedCompany.company}</a></span></h1>
+                        <h1 className="text-gray-500">{selectedCompany.time}</h1>
+                    </div>
                     <ul className="space-y-1">
                         { selectedCompany.points.map(point => <Point point={point}></Point>) }
                     </ul>

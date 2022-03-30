@@ -1,7 +1,70 @@
+import { GoMarkGithub } from 'react-icons/go';
+import { FaExternalLinkAlt } from 'react-icons/fa';
+
+interface ProjectRecord {
+    title: string
+    description: string
+    tags: Array<string>
+    projectUrl: string
+    githubUrl: string,
+    thumbUrl: string
+}
+
+const projectRecords: Array<ProjectRecord> = [
+    {
+        title: "AwesomeDrawsome",
+        description: "A drawing pad built for the web. Change your brush size, tip, and color. Undo and redo your strokes, use an eraser to erase your mistakes. Export your drawing to a png when you're finished.",
+        tags: ["React.js", "Chakra UI", "PIXI.js", "Netlify"],
+        projectUrl: "https://awesomedrawsome.netlify.app/",
+        githubUrl: "https://github.com/CierraM/AwesomeDrawsome",
+        thumbUrl: "./src/assets/Screenshot 2022-03-29 114949.png"
+    },
+    {
+        title: "Canvas to Notion",
+        description: "A small CLI utility to export assignments from Canvas and into Notion. Guides you through all the necessary steps to complete the export.",
+        tags: ["Node.js, Notion API"],
+        projectUrl: "https://github.com/thefloatingtree/canvas-to-notion",
+        githubUrl: "https://github.com/thefloatingtree/canvas-to-notion",
+        thumbUrl: "./src/assets/Screenshot 2022-03-29 175619.png"
+    },
+    // {
+    //     title: "",
+    //     description: "",
+    //     tags: [],
+    //     projectUrl: "",
+    //     githubUrl: "",
+    //     thumbUrl: ""
+    // },
+]
+
 export default function Projects() {
     return (
-        <div>
-            <h1>Projects</h1>
+        <div id="projects" className="font-arvo-bold text-prussian-blue space-y-3">
+            <h1 className="text-xl"># Projects</h1>
+            <div className="space-y-16">
+                {projectRecords.map(project => {
+                    return (
+                        <div className="space-y-3">
+                            <a href={project.projectUrl}>
+                                <h1 className="text-imperial-red text-xl">{project.title}</h1>
+                            </a>
+                            <p>{project.description}</p>
+                            <div><a href={project.projectUrl}><img className="rounded-lg" src={project.thumbUrl} alt="" /></a></div>
+                            <div className="flex space-x-3">
+                                {project.tags.map(tag => <div>{tag}</div>)}
+                            </div>
+                            <div className="flex space-x-3">
+                                <a target="_blank" href={project.githubUrl}>
+                                    <GoMarkGithub className="hover:text-imperial-red transition-all" size={24} />
+                                </a>
+                                <a target="_blank" href={project.projectUrl}>
+                                    <FaExternalLinkAlt className="hover:text-imperial-red transition-all" size={24} />
+                                </a>
+                            </div>
+                        </div>
+                    )
+                })}
+            </div>
         </div>
     )
 }

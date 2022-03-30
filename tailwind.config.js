@@ -9,7 +9,7 @@ module.exports = {
         'arvo-bold': ['Arvo']
       },
       colors: {
-        'antique-white': '#FFF2DE',
+        'antique-white': '#ffffff',
         'prussian-blue': '#1D3557',
         'blue-munsell': '#348AA7',
         'imperial-red': '#E63946'
