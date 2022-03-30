@@ -6,7 +6,7 @@ interface Props {
 
 const colorLookup: Record<string, string> = {
     'ghost': "text-prussian-blue hover:bg-black hover:bg-opacity-5",
-    'red': "text-white bg-imperial-red"
+    'red': "text-white bg-imperial-red hover:bg-imperial-red-darker"
 }
 
 export default function Button({ children, color = "ghost", onClick = () => {} }: Props) {

@@ -3,6 +3,7 @@ import { FaExternalLinkAlt } from 'react-icons/fa';
 
 import AwesomeDrawsomeThumbUrl from '../assets/Screenshot 2022-03-29 114949.png';
 import CanvasToNotionThumbUrl from '../assets/Screenshot 2022-03-29 175619.png';
+import PortfolioThumbUrl from '../assets/Screenshot 2022-03-30 141620.png';
 
 interface ProjectRecord {
     title: string
@@ -15,9 +16,17 @@ interface ProjectRecord {
 
 const projectRecords: Array<ProjectRecord> = [
     {
+        title: "Portfolio V1",
+        description: "Just a website to showcase myself and my work.",
+        tags: ["React", "Tailwind", "Netlify"],
+        projectUrl: "https://thefloatingtree.dev/",
+        githubUrl: "https://github.com/thefloatingtree/portfolio-v1",
+        thumbUrl: PortfolioThumbUrl
+    },
+    {
         title: "AwesomeDrawsome",
         description: "A drawing pad built for the web. Change your brush size, tip, and color. Undo and redo your strokes, use an eraser to erase your mistakes. Export your drawing to a png when you're finished.",
-        tags: ["React.js", "Chakra UI", "PIXI.js", "Netlify"],
+        tags: ["React", "Chakra UI", "PIXI.js", "Netlify"],
         projectUrl: "https://awesomedrawsome.netlify.app/",
         githubUrl: "https://github.com/CierraM/AwesomeDrawsome",
         thumbUrl: AwesomeDrawsomeThumbUrl
@@ -52,7 +61,7 @@ export default function Projects() {
                                 <h1 className="text-imperial-red text-xl">{project.title}</h1>
                             </a>
                             <p>{project.description}</p>
-                            <div><a href={project.projectUrl}><img className="rounded-lg" src={project.thumbUrl} alt="" /></a></div>
+                            <div><a href={project.projectUrl}><img className="rounded-lg shadow" src={project.thumbUrl} alt="" /></a></div>
                             <div className="flex space-x-3">
                                 {project.tags.map(tag => <div>{tag}</div>)}
                             </div>
