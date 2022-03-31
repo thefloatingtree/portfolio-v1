@@ -4,6 +4,7 @@ import { FaExternalLinkAlt } from 'react-icons/fa';
 import AwesomeDrawsomeThumbUrl from '../assets/Screenshot 2022-03-29 114949.png';
 import CanvasToNotionThumbUrl from '../assets/Screenshot 2022-03-29 175619.png';
 import PortfolioThumbUrl from '../assets/Screenshot 2022-03-30 141620.png';
+import TrengineThumbUrl from '../assets/Screenshot 2022-03-30 181826.png';
 
 interface ProjectRecord {
     title: string
@@ -18,7 +19,7 @@ const projectRecords: Array<ProjectRecord> = [
     {
         title: "Portfolio V1",
         description: "Just a website to showcase myself and my work.",
-        tags: ["React", "Tailwind", "Netlify"],
+        tags: ["TypeScript", "React", "Tailwind", "Netlify"],
         projectUrl: "https://thefloatingtree.dev/",
         githubUrl: "https://github.com/thefloatingtree/portfolio-v1",
         thumbUrl: PortfolioThumbUrl
@@ -34,19 +35,19 @@ const projectRecords: Array<ProjectRecord> = [
     {
         title: "Canvas to Notion",
         description: "A small CLI utility to export assignments from Canvas and into Notion. Guides you through all the necessary steps to complete the export.",
-        tags: ["Node.js, Notion API"],
+        tags: ["Node.js", "Notion API"],
         projectUrl: "https://github.com/thefloatingtree/canvas-to-notion",
         githubUrl: "https://github.com/thefloatingtree/canvas-to-notion",
         thumbUrl: CanvasToNotionThumbUrl
     },
-    // {
-    //     title: "",
-    //     description: "",
-    //     tags: [],
-    //     projectUrl: "",
-    //     githubUrl: "",
-    //     thumbUrl: ""
-    // },
+    {
+        title: "Trengine",
+        description: "A home-grown JavaScript game engine. Implements an ECS architecture and runs in an Electron environment. Supports rendering 3D and 2D scenes, sound, input, asset loading, animations, and physics.",
+        tags: ["Electron", "Three.js", "Vue.js"],
+        projectUrl: "https://github.com/thefloatingtree/Trengine-2",
+        githubUrl: "https://github.com/thefloatingtree/Trengine-2",
+        thumbUrl: TrengineThumbUrl
+    },
 ]
 
 export default function Projects() {
