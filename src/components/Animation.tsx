@@ -6,7 +6,12 @@ import AnimationIdleUrl from '../assets/Unicorn.png'
 export default function Animation() {
 
     const [currentSrc, setCurrentSrc] = useState(AnimationIdleUrl)
+    const [imageOpacity, setImageOpacity] = useState(0)
     const scrollY = useScrollYPosition()
+
+    const onImageLoad = () => {
+        setImageOpacity(100)
+    }
 
     useEffect(() => {
         // if (scrollY <= 600) {
@@ -16,12 +21,11 @@ export default function Animation() {
         // } else if (scrollY > 1150) {
         //     setCurrentSrc("https://media2.giphy.com/media/26BRyql7J3iOx875u/200.gif")
         // }
-        console.log(scrollY)
     }, [scrollY])
 
     return (
         <div className="min-w-96 pt-16">
-            <img className="h-96" src={currentSrc} alt="" />
+            <img onLoad={onImageLoad} className={`h-96 transition-all opacity-${imageOpacity}`} src={currentSrc} alt="" />
         </div>
     )
 }

@@ -1,7 +1,7 @@
 import { GoMarkGithub } from 'react-icons/go';
 import { FaExternalLinkAlt } from 'react-icons/fa';
 
-import AwesomeDrawsomeThumbUrl from '../assets/Screenshot 2022-03-29 114949.png';
+import MultiplayerDrawingAppThumbUrl from '../assets/MDA_Screenshot.png';
 import CanvasToNotionThumbUrl from '../assets/Screenshot 2022-03-29 175619.png';
 import PortfolioThumbUrl from '../assets/Screenshot 2022-03-30 141620.png';
 import TrengineThumbUrl from '../assets/Screenshot 2022-03-30 181826.png';
@@ -17,24 +17,24 @@ interface ProjectRecord {
 
 const projectRecords: Array<ProjectRecord> = [
     {
+        title: "Multiplayer Drawing App",
+        description: "A website I built for my senior project that allows one or more people to draw on a shared canvas in their browser. Implements all of the standard navigation and drawing tools.",
+        tags: ["TypeScript", "Svelte", "Tailwindcss", "PIXI.js", "WebSockets"],
+        projectUrl: "http://multiplayer-drawing-app.herokuapp.com/",
+        githubUrl: "https://github.com/thefloatingtree/Multiplayer-Drawing-App",
+        thumbUrl: MultiplayerDrawingAppThumbUrl
+    },
+    {
         title: "Portfolio V1",
-        description: "Just a website to showcase myself and my work.",
+        description: "A website to showcase myself and my work.",
         tags: ["TypeScript", "React", "Tailwind", "Netlify"],
         projectUrl: "https://thefloatingtree.dev/",
         githubUrl: "https://github.com/thefloatingtree/portfolio-v1",
         thumbUrl: PortfolioThumbUrl
     },
     {
-        title: "AwesomeDrawsome",
-        description: "A drawing pad built for the web. Change your brush size, tip, and color. Undo and redo your strokes, use an eraser to erase your mistakes. Export your drawing to a png when you're finished.",
-        tags: ["React", "Chakra UI", "PIXI.js", "Netlify"],
-        projectUrl: "https://awesomedrawsome.netlify.app/",
-        githubUrl: "https://github.com/CierraM/AwesomeDrawsome",
-        thumbUrl: AwesomeDrawsomeThumbUrl
-    },
-    {
         title: "Canvas to Notion",
-        description: "A small CLI utility to export assignments from Canvas and into Notion. Guides you through all the necessary steps to complete the export.",
+        description: "A small utility to export assignments from Canvas and into Notion. Guides you through all the necessary steps to complete the export.",
         tags: ["Node.js", "Notion API"],
         projectUrl: "https://github.com/thefloatingtree/canvas-to-notion",
         githubUrl: "https://github.com/thefloatingtree/canvas-to-notion",
