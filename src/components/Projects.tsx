@@ -5,6 +5,8 @@ import MultiplayerDrawingAppThumbUrl from '../assets/MDA_Screenshot.png';
 import CanvasToNotionThumbUrl from '../assets/Screenshot 2022-03-29 175619.png';
 import PortfolioThumbUrl from '../assets/Screenshot 2022-03-30 141620.png';
 import TrengineThumbUrl from '../assets/Screenshot 2022-03-30 181826.png';
+import NoteAppThumbUrl from '../assets/Screenshot 2022-09-09 113831.png';
+import DrawThisThumbUrl from '../assets/Screenshot 2022-09-09 114059.png';
 
 interface ProjectRecord {
     title: string
@@ -47,6 +49,22 @@ const projectRecords: Array<ProjectRecord> = [
         projectUrl: "https://github.com/thefloatingtree/Trengine-2",
         githubUrl: "https://github.com/thefloatingtree/Trengine-2",
         thumbUrl: TrengineThumbUrl
+    },
+    {
+        title: "Draw This",
+        description: "A web game that is played amongst friends. Each round of the game consists of a single describer describing an image taken from the Met Museum's API and all the rest of the players making a drawing based on that description. At the end of each round, the best drawing is voted on and the player with the most points at the end of the game wins.",
+        tags: ["Express.js", "React", "WebSockets"],
+        projectUrl: "https://drawthis.herokuapp.com/",
+        githubUrl: "https://github.com/per18020/draw-this",
+        thumbUrl: DrawThisThumbUrl
+    },
+    {
+        title: "Note Taking App",
+        description: "A web app written for a class project that enables users to create notes on the web. Implements a full WYSIWYG editor with Markdown support for quickly formatting notes. Notes can be named, searched, and sorted into collections.",
+        tags: ["PHP", "Bulma", "Postgres", "Heroku"],
+        projectUrl: "https://thawing-inlet-31036.herokuapp.com/project01/login.php",
+        githubUrl: "https://github.com/per18020/cs313-php",
+        thumbUrl: NoteAppThumbUrl
     },
 ]
 
