@@ -55,7 +55,7 @@ export default function Experience() {
             <h1 className="text-xl"># Experience</h1>
             <div className="grid grid-cols-3 gap-4">
                 <div className="col-span-1">
-                    { experienceRecords.map(record => <Button color={record.company == selectedCompany.company ? 'red' : 'ghost'} onClick={() => setSelectedCompany(record)} >{record.company}</Button> ) }
+                    { experienceRecords.map((record, index) => <Button key={index} color={record.company == selectedCompany.company ? 'red' : 'ghost'} onClick={() => setSelectedCompany(record)} >{record.company}</Button> ) }
                 </div>
                 <div className="col-span-2 space-y-3">
                     <div>
@@ -63,7 +63,7 @@ export default function Experience() {
                         <h1 className="text-gray-500">{selectedCompany.time}</h1>
                     </div>
                     <ul className="space-y-1">
-                        { selectedCompany.points.map(point => <Point point={point}></Point>) }
+                        { selectedCompany.points.map((point, index) => <Point key={index} point={point}></Point>) }
                     </ul>
                 </div>
             </div>

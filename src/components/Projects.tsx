@@ -55,16 +55,16 @@ export default function Projects() {
         <div id="projects" className="font-arvo-bold text-prussian-blue space-y-3">
             <h1 className="text-xl"># Projects</h1>
             <div className="space-y-16">
-                {projectRecords.map(project => {
+                {projectRecords.map((project, index) => {
                     return (
-                        <div className="space-y-3">
+                        <div key={index} className="space-y-3">
                             <a href={project.projectUrl}>
                                 <h1 className="text-imperial-red text-xl">{project.title}</h1>
                             </a>
                             <p>{project.description}</p>
                             <div><a href={project.projectUrl}><img className="rounded-lg shadow" src={project.thumbUrl} alt="" /></a></div>
                             <div className="flex space-x-3">
-                                {project.tags.map(tag => <div>{tag}</div>)}
+                                {project.tags.map((tag, index) => <div key={index}>{tag}</div>)}
                             </div>
                             <div className="flex space-x-3">
                                 <a target="_blank" href={project.githubUrl}>
